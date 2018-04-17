@@ -1,0 +1,99 @@
+[System]
+Name='fuzzy_logic_7'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=49
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='temperatura'
+Range=[-5 20]
+NumMFs=7
+MF1='mrozno':'trimf',[-9.167 -5 -0.8333]
+MF2='zimno':'trimf',[-5 -0.8333 3.333]
+MF3='chlodno':'trimf',[-0.8333 3.333 7.5]
+MF4='umiarkowanie':'trimf',[3.333 7.5 11.67]
+MF5='cieplo':'trimf',[7.5 11.67 15.83]
+MF6='goraco':'trimf',[11.67 15.83 20]
+MF7='upal':'trimf',[15.83 20 24.17]
+
+[Input2]
+Name='wilgotnoœæ'
+Range=[0 1]
+NumMFs=7
+MF1='susza':'trimf',[-0.1667 0 0.1667]
+MF2='bardzo__sucho':'trimf',[0 0.1667 0.3333]
+MF3='sucho':'trimf',[0.1667 0.3333 0.5]
+MF4='umiarkowanie':'trimf',[0.3333 0.5 0.6667]
+MF5='mokro':'trimf',[0.5 0.6667 0.8333]
+MF6='bardzo_mokro':'trimf',[0.6667 0.8333 1]
+MF7='maksymalnie':'trimf',[0.8333 1 1.167]
+
+[Output1]
+Name='szansa__na__grype'
+Range=[0 1]
+NumMFs=7
+MF1='zerowa':'trimf',[-0.1667 0 0.1667]
+MF2='bardzo__niska':'trimf',[0 0.1667 0.3333]
+MF3='niska':'trimf',[0.1667 0.3333 0.5]
+MF4='umiarkowana':'trimf',[0.3333 0.5 0.6667]
+MF5='duza':'trimf',[0.5 0.6667 0.8333]
+MF6='bardzo__duza':'trimf',[0.6667 0.8333 1]
+MF7='ogromna':'trimf',[0.8333 1 1.167]
+
+[Rules]
+1 7, 7 (1) : 1
+1 6, 7 (1) : 1
+1 5, 7 (1) : 1
+1 4, 6 (1) : 1
+1 3, 6 (1) : 1
+1 2, 5 (1) : 1
+1 1, 4 (1) : 1
+2 7, 7 (1) : 1
+2 6, 6 (1) : 1
+2 5, 6 (1) : 1
+2 4, 5 (1) : 1
+2 3, 5 (1) : 1
+2 2, 4 (1) : 1
+2 1, 4 (1) : 1
+3 7, 6 (1) : 1
+3 6, 5 (1) : 1
+3 5, 5 (1) : 1
+3 4, 5 (1) : 1
+3 3, 5 (1) : 1
+3 2, 4 (1) : 1
+3 1, 3 (1) : 1
+4 7, 5 (1) : 1
+4 6, 4 (1) : 1
+4 5, 4 (1) : 1
+4 4, 4 (1) : 1
+4 3, 4 (1) : 1
+4 2, 4 (1) : 1
+4 1, 3 (1) : 1
+5 7, 5 (1) : 1
+5 6, 4 (1) : 1
+5 5, 4 (1) : 1
+5 4, 3 (1) : 1
+5 3, 3 (1) : 1
+5 2, 2 (1) : 1
+5 1, 1 (1) : 1
+6 7, 4 (1) : 1
+6 6, 3 (1) : 1
+6 5, 3 (1) : 1
+6 4, 2 (1) : 1
+6 3, 2 (1) : 1
+6 2, 2 (1) : 1
+6 1, 1 (1) : 1
+7 7, 3 (1) : 1
+7 6, 2 (1) : 1
+7 5, 2 (1) : 1
+7 4, 1 (1) : 1
+7 3, 1 (1) : 1
+7 2, 1 (1) : 1
+7 1, 1 (1) : 1

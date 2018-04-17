@@ -1,0 +1,69 @@
+[System]
+Name='fuzzy_dsig'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='temperatura'
+Range=[-5 20]
+NumMFs=5
+MF1='ciep³o':'gbellmf',[2.01 3.275 13.26]
+MF2='ch³odno':'gbellmf',[2.46 3 1.253]
+MF3='zimno':'gbellmf',[1.944 4.494 -4.804]
+MF4='umiarkowanie':'gbellmf',[2.041 2.972 7.321]
+MF5='goraco':'gbellmf',[3.49 3.272 20.12]
+
+[Input2]
+Name='wilgotnoœæ'
+Range=[0 1]
+NumMFs=5
+MF1='mokro':'gbellmf',[0.08005 3.277 0.737]
+MF2='sucho':'gbellmf',[0.0871 3.282 0.2539]
+MF3='umiarkowanie':'gbellmf',[0.0904 3.278 0.4928]
+MF4='bardzo sucho':'gbellmf',[0.1142 3.608 -0.003952]
+MF5='bardzo mokro':'gbellmf',[0.07185 3.284 1.002]
+
+[Output1]
+Name='szansa__na__grype'
+Range=[0 1]
+NumMFs=5
+MF1='niska':'gbellmf',[0.1 3.278 0.2]
+MF2='srednia':'gbellmf',[0.1 3.278 0.4981]
+MF3='du¿a':'gbellmf',[0.1 3.278 0.8]
+MF4='bardzo niska':'gbellmf',[0.08996 3.278 -0.003015]
+MF5='bardzo duza':'gbellmf',[0.06165 3.282 0.9993]
+
+[Rules]
+3 5, 5 (1) : 1
+3 1, 5 (1) : 1
+3 3, 3 (1) : 1
+3 2, 3 (1) : 1
+3 4, 2 (1) : 1
+2 5, 3 (1) : 1
+2 1, 3 (1) : 1
+2 3, 3 (1) : 1
+2 2, 3 (1) : 1
+2 4, 2 (1) : 1
+4 5, 2 (1) : 1
+4 4, 2 (1) : 1
+4 3, 2 (1) : 1
+4 2, 2 (1) : 1
+4 1, 2 (1) : 1
+1 5, 2 (1) : 1
+1 1, 2 (1) : 1
+1 3, 1 (1) : 1
+1 2, 1 (1) : 1
+1 4, 4 (1) : 1
+5 5, 1 (1) : 1
+5 1, 1 (1) : 1
+5 3, 4 (1) : 1
+5 2, 4 (1) : 1
+5 4, 4 (1) : 1
