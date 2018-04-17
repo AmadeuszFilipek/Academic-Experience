@@ -22,4 +22,6 @@ Tools used:
   - PowerShell
   - R
   - Python
- 
+  - Latex
+  - MS Word
+  - MS PowerPoint
